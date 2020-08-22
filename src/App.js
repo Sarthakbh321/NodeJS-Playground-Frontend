@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Particles from "react-particles-js";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Particles width="100vw" height="100vh" params={{
+			"particles": {
+				"number": {
+					"value": 160,
+					"density": {
+						"enable": false
+					}
+				},
+				"color": {
+					"value": "#000000",
+				},
+				"size": {
+					"value": 10,
+					"random": true
+				},
+				"move": {
+					"direction": "bottom",
+					"out_mode": "out"
+				},
+				"line_linked": {
+					"enable": false
+				}
+			},
+			"interactivity": {
+				"events": {
+					"onclick": {
+						"enable": true,
+						"mode": "remove"
+					}
+				},
+				"modes": {
+					"remove": {
+						"particles_nb": 10
+					}
+				}
+			}
+		}} />
+	);
 }
 
 export default App;
